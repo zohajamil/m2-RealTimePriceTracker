@@ -19,7 +19,7 @@ const AppHeader = () => {
                         <ArrowBackIcon color="action" />
                     </IconButton>
                 )}
-                <div className="same-row">
+                <div className="same-row cursor-pointer" onClick={() => navigate(`/`)}>
                     <img src={logo} className="App-logo" alt="logo" />
                     <h3>Price Tracker App</h3>
                 </div>
