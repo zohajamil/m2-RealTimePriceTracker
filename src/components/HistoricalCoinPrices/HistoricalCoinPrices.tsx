@@ -4,7 +4,7 @@ import ApexCharts from 'apexcharts'
 import dayjs from "dayjs";
 import { useParams } from 'react-router-dom';
 import { coinData } from '../../common/CoinData';
-import './historicalBitcoinPrices.scss';
+import './historicalCoinPrices.scss';
 
 const HistoricalBitcoinPrices = () => {
   const [prices, setPrices] = useState([]);
@@ -81,7 +81,7 @@ const HistoricalBitcoinPrices = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div id="chart"></div>
+        <div data-testid="chart" id="chart"></div>
       )}
     </div>
   );

@@ -11,7 +11,7 @@ const Home = () => {
             <h2>Get Real Time Prices & data for your favorite coins.</h2>
             <Grid container spacing={2} justifyContent="center">
                 {coinData.map((coin: ICoin) => (
-                    <Grid item>
+                    <Grid item key={coin.code} data-testid="coin-card">
                         <CoinCard coin={coin} />
                     </Grid>
                 ))}

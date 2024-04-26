@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { Loading } from 'react-loading-dot'
 import './coinDetail.scss'
-import HistoricalBitcoinPrices from '../../components/HistoricalBitcoinPrices/HistoricalBitcoinPrices';
+import HistoricalBitcoinPrices from '../../components/HistoricalCoinPrices/HistoricalCoinPrices';
 
 const CoinDetail = () => {
   const [previousPrice, setPreviousPrice] = useState(0);
@@ -22,7 +22,7 @@ const CoinDetail = () => {
     return () => {
       socket.close();
     };
-  }, [])
+  }, [coinCode])
 
   useEffect(() => {
     if (currentPrice !== 0 && previousPrice !== 0) {
