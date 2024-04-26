@@ -3,7 +3,6 @@ import axios from 'axios';
 import ApexCharts from 'apexcharts'
 import dayjs from "dayjs";
 import { useParams } from 'react-router-dom';
-import { coinData } from '../../common/CoinData';
 import './historicalCoinPrices.scss';
 import { getCoinNameFromCode } from '../../common/utils';
 import { darkPrimaryColor } from '../../common/constants';
@@ -83,7 +82,7 @@ const HistoricalBitcoinPrices = () => {
 
   return (
     <div className="historical-bitcoin-prices-container">
-      <h2>Historical {getCoinNameFromCode(coinCode ?? '')} Prices Over the Past 3 Days</h2>
+      <h2>Historical {getCoinNameFromCode(coinCode ?? '')} Prices Data Over the Past 3 Days</h2>
       {loading ? (
         <p>Loading...</p>
       ) : (
