@@ -13,6 +13,7 @@ const AppHeader = () => {
     return (
         <AppBar position="static">
             <Toolbar sx={{ justifyContent: 'start' }}>
+                {/* Added Back Button only for Details Page. Clicking on the Back Button takes us to the HomePage */}
                 {window.location.pathname.includes('price-tracker') && (
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => navigate(`/`)}>
                         <ArrowBackIcon color="action" />

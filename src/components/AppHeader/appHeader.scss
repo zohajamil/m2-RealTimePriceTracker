@@ -2,15 +2,6 @@
 
 .MuiAppBar-root {
     background-color: $dark-primary-color !important;
-    .hyperlink {
-        color: $secondary-color;
-        text-decoration: underline;
-        cursor: pointer;
-
-        &:hover {
-            color: $light-primary-color;
-        }
-    }
 
     .same-row {
         display: flex;

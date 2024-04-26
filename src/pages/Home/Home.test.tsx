@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 describe('Home component', () => {
   it('should render CoinCard for all coins in coinData', () => {
+    // Wrapped BrowserRouter to remove the error for useNavigate
     render(<BrowserRouter><Home /></BrowserRouter>);
     
     // Get CoinCard elements rendered by the Home component

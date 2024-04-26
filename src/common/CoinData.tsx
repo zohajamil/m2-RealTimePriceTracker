@@ -1,5 +1,6 @@
 import { ICoin } from "./interfaces/Coin";
 
+// Data for top coins to be displayed
 export const coinData: ICoin[] = [
     {
         name: 'Bitcoin',

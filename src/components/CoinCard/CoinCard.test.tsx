@@ -15,6 +15,7 @@ describe('CoinCard component', () => {
     const mockNavigate = jest.fn();
     (useNavigate as any).mockReturnValue(mockNavigate);
 
+    // Initialized coin data to pass as props
     const coin = {
       code: 'BTC',
       name: 'Bitcoin',
@@ -23,7 +24,7 @@ describe('CoinCard component', () => {
 
     render(<CoinCard coin={coin} />);
 
-    // Simulate a click on the card
+    // Simulate a click on the card by getting it with img
     fireEvent.click(screen.getByRole('img'));
 
     // Verify that the navigate function is called with the correct URL

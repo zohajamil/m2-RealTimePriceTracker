@@ -7,15 +7,15 @@ import HistoricalBitcoinPrices from './HistoricalCoinPrices';
 // Mock axios
 jest.mock('axios');
 
-// mock resize observer
+// Mock resize observer
 class ResizeObserver {
     observe() { }
     unobserve() { }
 }
 
-describe('chart is displayed and it shows correct data', () => {
+describe('HistoricalCoinPrices component', () => {
     (window as any).ResizeObserver = ResizeObserver;
-    it('should render the chart with historical Bitcoin prices', async () => {
+    it('should render the chart with the correct data', async () => {
         // Mock response data
         const mockData = [
             [1619623200000, '60000', '62000', '59000', '61000'],

@@ -8,7 +8,7 @@ const CoinCard = (props: ICoinCardProps) => {
     const navigate = useNavigate()
 
     return (
-        <Card onClick={()=> navigate(`/price-tracker/${props.coin.code}`)}>
+        <Card onClick={()=> navigate(`/price-tracker/${props.coin.code}`)}> {/* Navigate to the coin's details page when clicked on coin card */}
             <CardMedia
                 image={require(`../../images/${props.coin.iconUrl}`)}
                 title={props.coin.code+'-logo'}
